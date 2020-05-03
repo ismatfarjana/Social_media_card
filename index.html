@@ -121,14 +121,28 @@
  ]
 }
 
+class Photo extends React.Component {
+
+  render () {
+
+      return (
+          <div className="photo">
+            <img src="images/syedaismatfarjana.jpg" alt="Photo" />
+          </div>
+
+      )
+
+
+  }
+}
+
+
 class Card extends React.Component {
   render () {
 
       return (
         <div className="card">
-          <div className="photo">
-            <img src="images/syedaismatfarjana.jpg" alt="Photo" />
-          </div>
+          <Photo />
           <div className="bio">
             <h1 className="name">Syeda Ismat Farjana</h1>
             <h2 className="location">Melbourne, Australia</h2>
