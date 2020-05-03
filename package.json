@@ -1,0 +1,23 @@
+{
+  "name": "social_media_card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel app --watch -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismatfarjana/Social_media_card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ismatfarjana/Social_media_card/issues"
+  },
+  "homepage": "https://github.com/ismatfarjana/Social_media_card#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
