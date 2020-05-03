@@ -129,12 +129,42 @@ class Photo extends React.Component {
           <div className="photo">
             <img src="images/syedaismatfarjana.jpg" alt="Photo" />
           </div>
-
       )
-
-
   }
 }
+
+
+class Bio extends React.Component {
+
+render () {
+
+    return (
+          <div className="bio">
+            <h1 className="name">Syeda Ismat Farjana</h1>
+            <h2 className="location">Melbourne, Australia</h2>
+            <div className="occupation">
+              <p>Stay home mom, physician, coder</p>
+            </div>
+          </div>
+    )
+}
+}
+
+class Updates extends React.Component {
+
+render () {
+
+    return (
+          <div className="updates">
+            <ul>
+              <li className="update">Updates</li>
+              <li className="update">Updates</li>
+            </ul>
+          </div>
+    )
+}
+}
+
 
 
 class Card extends React.Component {
@@ -143,19 +173,8 @@ class Card extends React.Component {
       return (
         <div className="card">
           <Photo />
-          <div className="bio">
-            <h1 className="name">Syeda Ismat Farjana</h1>
-            <h2 className="location">Melbourne, Australia</h2>
-            <div className="occupation">
-              <p>Stay home mom, physician, coder</p>
-            </div>
-          </div>
-          <div className="updates">
-            <ul>
-              <li className="update">Updates</li>
-              <li className="update">Updates</li>
-            </ul>
-          </div>
+          <Bio />
+          <Updates />
         </div> 
 
       )
