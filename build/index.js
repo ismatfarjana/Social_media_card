@@ -1,8 +1,8 @@
 var person = {
-  name: 'Syeda Ismat Farjana',
-  location: 'Melbourne, Australia',
+  name: 'Syeda Ismat Farjana Dipty',
+  location: 'Melbourne, Australia!',
   occupation: {
-    title: 'Stay home mom, physician, coder',
+    title: 'Mom, physician, coder',
     employer: '@home'
   },
   photo: './images/syedaismatfarjana.jpg',
@@ -56,7 +56,9 @@ class Bio extends React.Component {
         React.createElement(
           'p',
           null,
-          this.props.occupation
+          this.props.occupation.title,
+          ' at ',
+          this.props.occupation.employer
         )
       )
     );
@@ -94,8 +96,8 @@ class Card extends React.Component {
     return React.createElement(
       'div',
       { className: 'card' },
-      React.createElement(Photo, { photo: "images/syedaismatfarjana.jpg" }),
-      React.createElement(Bio, { name: "Syeda Ismat Farjana", location: "Melbourne, Australia", occupation: "Stay home mom, physician, coder" }),
+      React.createElement(Photo, { photo: person.photo }),
+      React.createElement(Bio, { name: person.name, location: person.location, occupation: person.occupation }),
       React.createElement(Updates, null)
     );
   }

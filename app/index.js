@@ -1,8 +1,8 @@
 var person = {
-  name: 'Syeda Ismat Farjana',
-  location: 'Melbourne, Australia',
+  name: 'Syeda Ismat Farjana Dipty',
+  location: 'Melbourne, Australia!',
   occupation: {
-    title: 'Stay home mom, physician, coder',
+    title: 'Mom, physician, coder',
     employer: '@home'
   },
   photo: './images/syedaismatfarjana.jpg',
@@ -48,7 +48,7 @@ var person = {
              <h1 className="name">{this.props.name}</h1>
              <h2 className="location">{this.props.location}</h2>
              <div className="occupation">
-               <p>{this.props.occupation}</p>
+               <p>{this.props.occupation.title} at {this.props.occupation.employer}</p>
              </div>
            </div>
      )
@@ -77,8 +77,8 @@ var person = {
  
        return (
          <div className="card">
-           <Photo photo={"images/syedaismatfarjana.jpg"}/>
-           <Bio name={"Syeda Ismat Farjana"} location={"Melbourne, Australia"} occupation={"Stay home mom, physician, coder"}/>
+           <Photo photo={person.photo}/>
+           <Bio name={person.name} location={person.location} occupation={person.occupation}/>
            <Updates />
          </div> 
  
