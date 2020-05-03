@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ismatfarjana/Social_media_card#readme",
   "devDependencies": {
+    "braces": ">=2.3.1",
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1"
   }
