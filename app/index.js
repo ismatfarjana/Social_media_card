@@ -32,7 +32,7 @@ var person = {
  
        return (
            <div className="photo">
-             <img src="images/syedaismatfarjana.jpg" alt="Photo" />
+             <img src={this.props.photo} alt="Photo" />
            </div>
        )
    }
@@ -45,10 +45,10 @@ var person = {
  
      return (
            <div className="bio">
-             <h1 className="name">Syeda Ismat Farjana</h1>
-             <h2 className="location">Melbourne, Australia</h2>
+             <h1 className="name">{this.props.name}</h1>
+             <h2 className="location">{this.props.location}</h2>
              <div className="occupation">
-               <p>Stay home mom, physician, coder</p>
+               <p>{this.props.occupation}</p>
              </div>
            </div>
      )
@@ -77,8 +77,8 @@ var person = {
  
        return (
          <div className="card">
-           <Photo />
-           <Bio />
+           <Photo photo={"images/syedaismatfarjana.jpg"}/>
+           <Bio name={"Syeda Ismat Farjana"} location={"Melbourne, Australia"} occupation={"Stay home mom, physician, coder"}/>
            <Updates />
          </div> 
  

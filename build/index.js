@@ -28,7 +28,7 @@ class Photo extends React.Component {
     return React.createElement(
       'div',
       { className: 'photo' },
-      React.createElement('img', { src: 'images/syedaismatfarjana.jpg', alt: 'Photo' })
+      React.createElement('img', { src: this.props.photo, alt: 'Photo' })
     );
   }
 }
@@ -43,12 +43,12 @@ class Bio extends React.Component {
       React.createElement(
         'h1',
         { className: 'name' },
-        'Syeda Ismat Farjana'
+        this.props.name
       ),
       React.createElement(
         'h2',
         { className: 'location' },
-        'Melbourne, Australia'
+        this.props.location
       ),
       React.createElement(
         'div',
@@ -56,7 +56,7 @@ class Bio extends React.Component {
         React.createElement(
           'p',
           null,
-          'Stay home mom, physician, coder'
+          this.props.occupation
         )
       )
     );
@@ -94,8 +94,8 @@ class Card extends React.Component {
     return React.createElement(
       'div',
       { className: 'card' },
-      React.createElement(Photo, null),
-      React.createElement(Bio, null),
+      React.createElement(Photo, { photo: "images/syedaismatfarjana.jpg" }),
+      React.createElement(Bio, { name: "Syeda Ismat Farjana", location: "Melbourne, Australia", occupation: "Stay home mom, physician, coder" }),
       React.createElement(Updates, null)
     );
   }
