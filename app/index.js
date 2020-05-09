@@ -56,14 +56,26 @@ var person = {
  }
  
  class Updates extends React.Component {
+
+  updates() {
+
+    return this.props.updates.map(function(update,index){
+      console.log(update)
+      return (
+        <li className={"update" + update.platform} key={index}>
+          {update.status}
+        </li>
+      )
+    });
+
+  }
  
  render () {
  
      return (
            <div className="updates">
              <ul>
-               <li className="update">Updates</li>
-               <li className="update">Updates</li>
+                 {this.updates()}
              </ul>
            </div>
      )
@@ -74,12 +86,12 @@ var person = {
  
  class Card extends React.Component {
    render () {
- 
+    console.log(person.updates)
        return (
          <div className="card">
            <Photo photo={person.photo}/>
            <Bio name={person.name} location={person.location} occupation={person.occupation}/>
-           <Updates />
+           <Updates updates={person.updates}/>
          </div> 
  
        )
